@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  wms-backend:
+    build: .
+    container_name: wms-orquestador
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./wms_local.db:/app/wms_local.db
+    restart: unless-stopped
